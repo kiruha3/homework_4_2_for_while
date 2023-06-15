@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-//        task1();
+        task1();
 //        task2();
 //        task3();
         // task4();
         // task5();
-        task6();
+        //task6();
         task7();
         task8();
         task9();
@@ -107,7 +107,7 @@ public class Main {
         float yearPercent = 0.07f;
 
         int year = 12;
-        int halfYear =year/2;
+        int halfYear = year / 2;
         int countYear = 9;
         int countAllMonth = year * countYear;
 
@@ -126,7 +126,14 @@ public class Main {
 
     private static void task7() {
         System.out.println("Задача 7");
-
+        int firtFriday = 2;
+        int oneWeek = 7;
+        int dayPerMonth = 31;
+        int i=firtFriday;
+        while (i < 31){
+            System.out.println("Сегодня пятница, "+i+"-е число. Необходимо подготовить отчет");
+            i+=oneWeek;
+        }
     }
 
     private static void task8() {

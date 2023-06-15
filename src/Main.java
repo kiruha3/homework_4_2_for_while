@@ -3,7 +3,7 @@ public class Main {
 //        task1();
 //        task2();
 //        task3();
-        task4();
+        // task4();
         task5();
         task6();
         task7();
@@ -72,17 +72,40 @@ public class Main {
         while (dreamMoneyFinally > nowMoney){
             i++;
             nowMoney=nowMoney*monthPercent;
-            System.out.printf("Месяц %d, денег на такущий месец вклад имеет %.2f %n",i,nowMoney);
+            System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n",i,nowMoney);
         }
     }
 
     private static void task5() {
         System.out.println("Задача 5");
+        int dreamMoneyFinally = 12_000_000;
+        double nowMoney = 0;
 
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+        int year = 12;
+
+        float monthPercent = (yearPercent / year) + 1;
+        nowMoney+=firstDepoit;
+        int i =0;
+        while (dreamMoneyFinally > nowMoney){
+            i++;
+            nowMoney=nowMoney*monthPercent;
+            if (i%6==0){
+                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n",i,nowMoney);
+            }
+        }
     }
 
     private static void task6() {
         System.out.println("Задача 6");
+        double nowMoney = 0;
+
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+        int year = 12;
     }
 
     private static void task7() {

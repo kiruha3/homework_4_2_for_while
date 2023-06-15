@@ -1,26 +1,31 @@
 public class Main {
     public static void main(String[] args) {
-        // task1();
+        task1();
 //        task2();
 //        task3();
         //task4();
         //task5();
         //task6();
         //task7();
-        task8();
+        //task8();
+
 
     }
 
     private static void task1() {
         System.out.println("Задача 1");
-        int nowVklad = 0;
+        double nowVklad = 0;
         int moneyPerMonth = 15_000;
         int allSum = 2_459_000;
         int i = 0;
-        while (allSum > nowVklad) {
+        int year = 12;
+        float yearPercent = 0.12f;
+        float monthPercent = 1.0f+(yearPercent/year);
+        while (nowVklad<allSum){
             i++;
             nowVklad += moneyPerMonth;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + nowVklad + " рублей");
+            nowVklad = nowVklad * monthPercent;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f %n",i,nowVklad);
         }
     }
 
@@ -143,6 +148,10 @@ public class Main {
                 System.out.println(i);
             }
         }
+    }
+    private static void task9() {
+        System.out.println("Задача 9");
+
     }
 
 }

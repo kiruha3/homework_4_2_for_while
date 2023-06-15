@@ -135,12 +135,11 @@ public class Main {
     private static void task8() {
         System.out.println("Задача 8");
         int nowYear = 2023;
-        int firtYearForKometa = 0;
         int distanceBetweenKometa = 79;
         int intervalEnter = 200;
         int intervalFuture = 100;
-        for (int i = nowYear-intervalEnter; i < nowYear+intervalFuture ; i++) {
-            if (i%79==0){
+        for (int i = nowYear - intervalEnter; i < nowYear + intervalFuture; i++) {
+            if (i % distanceBetweenKometa == 0) {
                 System.out.println(i);
             }
         }

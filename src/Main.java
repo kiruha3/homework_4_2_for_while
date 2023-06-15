@@ -8,8 +8,6 @@ public class Main {
         task6();
         task7();
         task8();
-
-
     }
 
     private static void task1() {

@@ -4,7 +4,7 @@ public class Main {
 //        task2();
 //        task3();
         // task4();
-        task5();
+        // task5();
         task6();
         task7();
         task8();
@@ -67,12 +67,12 @@ public class Main {
         int year = 12;
 
         float monthPercent = (yearPercent / year) + 1;
-        nowMoney+=firstDepoit;
-        int i =0;
-        while (dreamMoneyFinally > nowMoney){
+        nowMoney += firstDepoit;
+        int i = 0;
+        while (dreamMoneyFinally > nowMoney) {
             i++;
-            nowMoney=nowMoney*monthPercent;
-            System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n",i,nowMoney);
+            nowMoney = nowMoney * monthPercent;
+            System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
         }
     }
 
@@ -87,13 +87,13 @@ public class Main {
         int year = 12;
 
         float monthPercent = (yearPercent / year) + 1;
-        nowMoney+=firstDepoit;
-        int i =0;
-        while (dreamMoneyFinally > nowMoney){
+        nowMoney += firstDepoit;
+        int i = 0;
+        while (dreamMoneyFinally > nowMoney) {
             i++;
-            nowMoney=nowMoney*monthPercent;
-            if (i%6==0){
-                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n",i,nowMoney);
+            nowMoney = nowMoney * monthPercent;
+            if (i % 6 == 0) {
+                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
             }
         }
     }
@@ -105,7 +105,23 @@ public class Main {
         int firstDepoit = 15_000;
 
         float yearPercent = 0.07f;
+
         int year = 12;
+        int halfYear =year/2;
+        int countYear = 9;
+        int countAllMonth = year * countYear;
+
+        float monthPercent = (yearPercent / year) + 1;
+        nowMoney += firstDepoit;
+        int i = 0;
+        while (i <= countAllMonth) {
+            i++;
+            nowMoney = nowMoney * monthPercent;
+            if (i % halfYear == 0) {
+                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
+            }
+        }
+
     }
 
     private static void task7() {

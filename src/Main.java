@@ -43,17 +43,17 @@ public class Main {
     private static void task3() {
         System.out.println("Задача 3");
         int humanY = 12_000_000;
-        int souls =
+        int souls = 1000;
         int fertilityPerYearOnThousand = 17;
         int diePerYearOnThousand = 8;
         int fertPerYear = 0;
         int diePerYear = 0;
-        for (int i = 0; i <= 10; i++) {
-            fertPerYear = humanY / 1000 * fertilityPerYearOnThousand;
-            diePerYear = humanY / 1000 * diePerYearOnThousand;
-            humanY=humanY+fertPerYear-diePerYear;
+        for (int i = 1; i <= 10; i++) {
+            fertPerYear = humanY / souls * fertilityPerYearOnThousand;
+            diePerYear = humanY / souls * diePerYearOnThousand;
+            humanY = humanY + fertPerYear - diePerYear;
+            System.out.println("Год " + i + ", численность населения составляет " + humanY);
         }
-
     }
 
     private static void task4() {

@@ -8,55 +8,142 @@ public class Main {
         task6();
         task7();
         task8();
-        task9();
-        task10();
-
     }
 
     private static void task1() {
         System.out.println("Задача 1");
-
+        double nowVklad = 0;
+        int moneyPerMonth = 15_000;
+        int allSum = 2_459_000;
+        int i = 0;
+        int year = 12;
+        float yearPercent = 0.12f;
+        float monthPercent = 1.0f + (yearPercent / year);
+        while (nowVklad < allSum) {
+            i++;
+            nowVklad += moneyPerMonth;
+            nowVklad = nowVklad * monthPercent;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f %n", i, nowVklad);
+        }
     }
 
     private static void task2() {
         System.out.println("Задача 2");
+        int i = 0;
+        while (i <= 10) {
+            System.out.printf(i++ + " ");
+        }
+        System.out.println();
 
+        for (int j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 
     private static void task3() {
         System.out.println("Задача 3");
-
+        int humanY = 12_000_000;
+        int souls = 1000;
+        int fertilityPerYearOnThousand = 17;
+        int diePerYearOnThousand = 8;
+        int fertPerYear = 0;
+        int diePerYear = 0;
+        for (int i = 1; i <= 10; i++) {
+            fertPerYear = humanY / souls * fertilityPerYearOnThousand;
+            diePerYear = humanY / souls * diePerYearOnThousand;
+            humanY = humanY + fertPerYear - diePerYear;
+            System.out.println("Год " + i + ", численность населения составляет " + humanY);
+        }
     }
 
     private static void task4() {
         System.out.println("Задача 4");
+        int dreamMoneyFinally = 12_000_000;
+        double nowMoney = 0;
 
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+
+        float monthPercent = yearPercent + 1;
+        int i = 0;
+        while (dreamMoneyFinally > nowMoney) {
+            i++;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
+            System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
+        }
     }
 
     private static void task5() {
         System.out.println("Задача 5");
+        int dreamMoneyFinally = 12_000_000;
+        double nowMoney = 0;
 
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+
+        float monthPercent = yearPercent + 1;
+        int i = 0;
+        while (dreamMoneyFinally > nowMoney) {
+            i++;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
+            if (i % 6 == 0) {
+                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
+            }
+        }
     }
 
     private static void task6() {
         System.out.println("Задача 6");
+        double nowMoney = 0;
+
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+
+        int year = 12;
+        int halfYear = year / 2;
+        int countYear = 9;
+        int countAllMonth = year * countYear;
+
+        float monthPercent = yearPercent + 1;
+        int i = 0;
+        while (i <= countAllMonth) {
+            i++;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
+            if (i % halfYear == 0) {
+                System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
+            }
+        }
+
     }
 
     private static void task7() {
         System.out.println("Задача 7");
-
+        int firtFriday = 2;
+        int oneWeek = 7;
+        int dayPerMonth = 31;
+        int i = firtFriday;
+        while (i < dayPerMonth) {
+            System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
+            i += oneWeek;
+        }
     }
 
     private static void task8() {
         System.out.println("Задача 8");
-
+        int nowYear = 2023;
+        int distanceBetweenKometa = 79;
+        int intervalEnter = 200;
+        int intervalFuture = 100;
+        for (int i = nowYear - intervalEnter; i < nowYear + intervalFuture; i++) {
+            if (i % distanceBetweenKometa == 0) {
+                System.out.println(i);
+            }
+        }
     }
 
-    private static void task9() {
-        System.out.println("Задача 9");
 
-    }
-    private static void task10() {
-
-    }
 }

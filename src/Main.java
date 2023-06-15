@@ -3,13 +3,11 @@ public class Main {
         // task1();
 //        task2();
 //        task3();
-        // task4();
-        // task5();
+        //task4();
+        //task5();
         //task6();
-        task7();
+        //task7();
         task8();
-        task9();
-        task10();
 
     }
 
@@ -64,9 +62,8 @@ public class Main {
         int firstDepoit = 15_000;
 
         float yearPercent = 0.07f;
-        int year = 12;
 
-        float monthPercent = (yearPercent / year) + 1;
+        float monthPercent = yearPercent + 1;
         nowMoney += firstDepoit;
         int i = 0;
         while (dreamMoneyFinally > nowMoney) {
@@ -84,9 +81,8 @@ public class Main {
         int firstDepoit = 15_000;
 
         float yearPercent = 0.07f;
-        int year = 12;
 
-        float monthPercent = (yearPercent / year) + 1;
+        float monthPercent = yearPercent + 1;
         nowMoney += firstDepoit;
         int i = 0;
         while (dreamMoneyFinally > nowMoney) {
@@ -111,7 +107,7 @@ public class Main {
         int countYear = 9;
         int countAllMonth = year * countYear;
 
-        float monthPercent = (yearPercent / year) + 1;
+        float monthPercent = yearPercent + 1;
         nowMoney += firstDepoit;
         int i = 0;
         while (i <= countAllMonth) {
@@ -129,24 +125,25 @@ public class Main {
         int firtFriday = 2;
         int oneWeek = 7;
         int dayPerMonth = 31;
-        int i=firtFriday;
-        while (i < 31){
-            System.out.println("Сегодня пятница, "+i+"-е число. Необходимо подготовить отчет");
-            i+=oneWeek;
+        int i = firtFriday;
+        while (i < 31) {
+            System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
+            i += oneWeek;
         }
     }
 
     private static void task8() {
         System.out.println("Задача 8");
-
+        int nowYear = 2023;
+        int firtYearForKometa = 0;
+        int distanceBetweenKometa = 79;
+        int intervalEnter = 200;
+        int intervalFuture = 100;
+        for (int i = nowYear-intervalEnter; i < nowYear+intervalFuture ; i++) {
+            if (i%79==0){
+                System.out.println(i);
+            }
+        }
     }
 
-    private static void task9() {
-        System.out.println("Задача 9");
-
-    }
-
-    private static void task10() {
-
-    }
 }

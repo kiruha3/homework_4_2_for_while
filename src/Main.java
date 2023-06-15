@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         task1();
-//        task2();
-//        task3();
-        //task4();
-        //task5();
-        //task6();
-        //task7();
-        //task8();
+        task2();
+        task3();
+        task4();
+        task5();
+        task6();
+        task7();
+        task8();
 
 
     }
@@ -20,12 +20,12 @@ public class Main {
         int i = 0;
         int year = 12;
         float yearPercent = 0.12f;
-        float monthPercent = 1.0f+(yearPercent/year);
-        while (nowVklad<allSum){
+        float monthPercent = 1.0f + (yearPercent / year);
+        while (nowVklad < allSum) {
             i++;
             nowVklad += moneyPerMonth;
             nowVklad = nowVklad * monthPercent;
-            System.out.printf("Месяц %d, сумма накоплений равна %.2f %n",i,nowVklad);
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f %n", i, nowVklad);
         }
     }
 
@@ -69,11 +69,10 @@ public class Main {
         float yearPercent = 0.07f;
 
         float monthPercent = yearPercent + 1;
-        nowMoney += firstDepoit;
         int i = 0;
         while (dreamMoneyFinally > nowMoney) {
             i++;
-            nowMoney = nowMoney * monthPercent;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
             System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
         }
     }
@@ -88,11 +87,10 @@ public class Main {
         float yearPercent = 0.07f;
 
         float monthPercent = yearPercent + 1;
-        nowMoney += firstDepoit;
         int i = 0;
         while (dreamMoneyFinally > nowMoney) {
             i++;
-            nowMoney = nowMoney * monthPercent;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
             if (i % 6 == 0) {
                 System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
             }
@@ -113,11 +111,10 @@ public class Main {
         int countAllMonth = year * countYear;
 
         float monthPercent = yearPercent + 1;
-        nowMoney += firstDepoit;
         int i = 0;
         while (i <= countAllMonth) {
             i++;
-            nowMoney = nowMoney * monthPercent;
+            nowMoney = (nowMoney + firstDepoit) * monthPercent;
             if (i % halfYear == 0) {
                 System.out.printf("Месяц %d, денег на текущий месец вклад имеет %.2f %n", i, nowMoney);
             }
@@ -131,7 +128,7 @@ public class Main {
         int oneWeek = 7;
         int dayPerMonth = 31;
         int i = firtFriday;
-        while (i < 31) {
+        while (i < dayPerMonth) {
             System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
             i += oneWeek;
         }
@@ -149,9 +146,6 @@ public class Main {
             }
         }
     }
-    private static void task9() {
-        System.out.println("Задача 9");
 
-    }
 
 }

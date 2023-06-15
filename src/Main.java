@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
+//        task1();
+//        task2();
+//        task3();
         task4();
         task5();
         task6();
@@ -58,7 +58,22 @@ public class Main {
 
     private static void task4() {
         System.out.println("Задача 4");
+        int dreamMoneyFinally = 12_000_000;
+        double nowMoney = 0;
 
+        int firstDepoit = 15_000;
+
+        float yearPercent = 0.07f;
+        int year = 12;
+
+        float monthPercent = (yearPercent / year) + 1;
+        nowMoney+=firstDepoit;
+        int i =0;
+        while (dreamMoneyFinally > nowMoney){
+            i++;
+            nowMoney=nowMoney*monthPercent;
+            System.out.printf("Месяц %d, денег на такущий месец вклад имеет %.2f %n",i,nowMoney);
+        }
     }
 
     private static void task5() {
